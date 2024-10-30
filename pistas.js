@@ -59,6 +59,10 @@ class Pistas {
             else if (foo >= 7200) {
                 alert('La duración de la pista no puede ser mayor que 7200 segundos');
                 datoValido = false;
+            } 
+            else if(isNaN(foo)) {
+                alert('No ingrese texto');
+                datoValido = false;
             }
             
             else {
@@ -79,12 +83,10 @@ class Pistas {
         let minutosModificados = minutos;
         let segundosModificados = seg;
 
-        // Asegurarse de que los minutos tengan dos dígitos
         if (minutos < 10) {
             minutosModificados = '0' + minutos;
         }
         
-        // Asegurarse de que los segundos tengan dos dígitos
         if (seg < 10) {
             segundosModificados = '0' + seg;
         }
