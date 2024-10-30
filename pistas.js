@@ -60,7 +60,7 @@ class Pistas {
                 alert('La duración de la pista no puede ser mayor que 7200 segundos');
                 datoValido = false;
             } 
-            else if(isNaN(foo)) {
+            else if(!isNaN(foo)) {
                 alert('No ingrese texto');
                 datoValido = false;
             }
