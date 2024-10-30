@@ -30,7 +30,7 @@ class Pistas {
             else if (foo.trim() === "") {
                 alert('Por favor no de aceptar');
                 datoValido = false;
-            }
+            } 
     
             else {
                 datoValido = true;
@@ -61,7 +61,7 @@ class Pistas {
                 datoValido = false;
             } 
             else if(isNaN(foo)) {
-                alert('Ingrese duracion en segundos');
+                alert('No ingrese texto');
                 datoValido = false;
             }
             

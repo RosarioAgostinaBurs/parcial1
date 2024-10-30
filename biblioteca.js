@@ -12,7 +12,16 @@ class Biblioteca {
         let nombre = Disco.pedirNombre();
         let autor = Disco.pedirAutor();
         let portada = Disco.pedirPortada();
-        let codigo = Disco.pedirCodigo();
+        let codigo;
+
+        do {
+            codigo = Disco.pedirCodigo(); 
+            const codigoExistente = this.discos.some(dis => dis.codigo === codigo);
+            if (codigoExistente) {
+                alert('El código ya existe. Por favor, ingrese uno único.');
+            }
+
+        } while (this.discos.some(dis => dis.codigo === codigo));
 
         let disco = new Disco(nombre, autor, portada, codigo);
 
